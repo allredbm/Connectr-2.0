@@ -1,0 +1,118 @@
+<!-- W3CSS NAVBAR -->
+<div class="w3-container w3-center w3-animate-opacity">
+<div class="w3-topnav w3-medium w3-black">
+
+
+  <a href="activities.html">Activities</a>
+  <a href="interests.html">Interests</a>
+  <a href="connections.html">Connections</a>
+  <a href="signup.html">Sign in</a>
+
+  <!-- DROPDOWN MAIN-->
+  <div class="w3-dropdown-hover">
+  <button class="w3-btn w3-black"> Connectr. </button>
+  <div class="w3-dropdown-content w3-border w3-black">
+
+    <!--  DROPDOWN ITEM #1 -->
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn">  About this site.  </button>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content-black">
+      <div class="w3-container">
+        <div class="w3-container w3-center w3-animate-opacity">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn" >×</span>
+        <h1>Connectr.</h1>
+        <h4>Developed in Ruby on Rails, jQuery, and W3CSS.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ITEM #1 END -->
+
+<!-- DROPDOWN MAIN-->
+  <div class="w3-dropdown-content w3-border w3-black">
+
+    <!--  DROPDOWN ITEM #2 -->
+      <button onclick="document.getElementById('id02').style.display='block'" class="w3-btn"> Developers </button>
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content-black">
+      <div class="w3-container">
+        <div class="w3-container w3-center w3-animate-opacity">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn" >×</span>
+        <h1>Developed by:</h1>
+        <h4>Developed by Nora Orton, Matt Maring, Ben Allred, Heather Shane. </h4>
+        <h6>Group 6, get hype</h6>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ITEM #2 END -->
+
+
+    <!-- DROPDOWN END-->
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- NAVBAR END -->
+
+</head>
+<div class="w3-container w3-center w3-animate-opacity">
+  <h1 class="header1"> Tell us about yourself. </h1>
+<div class="w3-card-4" style="width:100%">
+</div>
+</div>
+
+
+
+<%= form_for(@interest) do |f| %>
+  <% if @interest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@interest.errors.count, "error") %> prohibited this interest from being saved:</h2>
+
+      <ul>
+      <% @interest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+<!-- 
+        <span class="interests"><h2>Interests</h2></span> 
+        
+        <h5>Food/Drink</h5> 
+        <form>
+          <input type="checkbox" name="vehicle1" value="Bike"> Craft Beer
+          <input type="checkbox" name="vehicle2" value="Car"> Farm to Fork <br>
+          <input type="checkbox" name="vehicle1" value="Bike"> Carolina BBQ
+          <input type="checkbox" name="vehicle2" value="Car"> Mixed Drinks
+        </form>
+
+        <h5>Athletics</h5> 
+        <form>
+            <input type="checkbox" name="vehicle1" value="Bike"> Football
+            <input type="checkbox" name="vehicle2" value="Car"> Basketball <br>
+            <input type="checkbox" name="vehicle1" value="Bike"> Outdoor Activities
+            <input type="checkbox" name="vehicle2" value="Car"> Pick Up </form>
+        <h5>Arts/Culture</h5>
+        <form> 
+            <input type="checkbox" name="vehicle1" value="Bike"> Music 
+            <input type="checkbox" name="vehicle2" value="Car"> Galleries <br>
+            <input type="checkbox" name="vehicle1" value="Bike"> Theater
+            <input type="checkbox" name="vehicle2" value="Car">  Museums
+        </form>
+      </div> -->
+

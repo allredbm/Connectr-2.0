@@ -1,0 +1,45 @@
+// Place all the styles related to the Interests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	box-sizing: border-box;
+	
+}
+
+body {
+	background-color: #ddd;
+	color: #222;
+  font-weight: 300;
+}
+
+#login-box{
+	position: relative;
+	margin: 5% auto;
+	background-color: #FFF;
+  padding-bottom: 300px;
+	width: 500px;
+	height: 900px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+
+
+}
+
+form {
+  background-color: white;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+form {
+	border: 0
+}
+
